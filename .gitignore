@@ -1,0 +1,17 @@
+# 本地原始素材（体积较大，不纳入仓库版本控制）
+# 需要时再从官方手册重新导出
+assets/img/screens-raw/
+manual/
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/
+
+# 构建产物与临时目录
+.tmp/
+node_modules/
+*.log

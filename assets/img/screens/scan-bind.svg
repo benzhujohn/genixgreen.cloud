@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 660" width="300" height="660" role="img" aria-label="GENIXGREEN app — scan the battery QR code to bind">
+  <rect width="300" height="660" fill="#06120C"/>
+
+  <text x="16" y="19" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#E8EEF7">16:39</text>
+  <g fill="#E8EEF7">
+    <rect x="212" y="11" width="3" height="7" rx="1"/>
+    <rect x="218" y="8" width="3" height="10" rx="1"/>
+    <rect x="224" y="5" width="3" height="13" rx="1"/>
+    <path d="M236 14a11 11 0 0 1 13 0" fill="none" stroke="#E8EEF7" stroke-width="1.6"/>
+    <rect x="262" y="6" width="26" height="12" rx="3" fill="none" stroke="#E8EEF7" stroke-width="1.2"/>
+    <rect x="264" y="8" width="16" height="8" rx="1.5"/>
+    <rect x="289" y="9.5" width="2" height="5" rx="1"/>
+  </g>
+
+  <rect x="0" y="28" width="300" height="46" fill="#0A1520"/>
+  <path d="M20 45l-6 6 6 6" fill="none" stroke="#E8EEF7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="150" y="57" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" fill="#E8EEF7" text-anchor="middle">Bind Device</text>
+  <rect x="0" y="74" width="300" height="1" fill="#152234"/>
+
+  <g fill="none" stroke="#3B82F6" stroke-width="3.5" stroke-linecap="round">
+    <path d="M78 250v-28h28"/>
+    <path d="M222 250v-28h-28"/>
+    <path d="M78 358v28h28"/>
+    <path d="M222 358v28h-28"/>
+  </g>
+  <g opacity="0.65">
+    <rect x="122" y="288" width="24" height="24" rx="4" fill="none" stroke="#2E4A6E" stroke-width="2"/>
+    <rect x="154" y="288" width="24" height="24" rx="4" fill="none" stroke="#2E4A6E" stroke-width="2"/>
+    <rect x="122" y="320" width="24" height="24" rx="4" fill="none" stroke="#2E4A6E" stroke-width="2"/>
+    <rect x="154" y="320" width="24" height="24" rx="4" fill="none" stroke="#2E4A6E" stroke-width="2"/>
+  </g>
+
+  <text x="150" y="462" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#8095AE" text-anchor="middle">Align the viewfinder with the QR code/barcode</text>
+  <text x="150" y="480" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#8095AE" text-anchor="middle">to automatically scan</text>
+
+  <rect x="104" y="520" width="92" height="32" rx="16" fill="#0F2233" stroke="#1E3A55" stroke-width="1"/>
+  <text x="150" y="541" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#7EC4F5" text-anchor="middle">Bluetooth on</text>
+</svg>

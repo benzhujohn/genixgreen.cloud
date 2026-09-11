@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 660" width="300" height="660" role="img" aria-label="GENIXGREEN app — rename your device">
+  <rect width="300" height="660" fill="#0A1220"/>
+
+  <text x="16" y="19" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#E8EEF7">08:35</text>
+  <g fill="#E8EEF7">
+    <rect x="212" y="11" width="3" height="7" rx="1"/>
+    <rect x="218" y="8" width="3" height="10" rx="1"/>
+    <rect x="224" y="5" width="3" height="13" rx="1"/>
+    <path d="M236 14a11 11 0 0 1 13 0" fill="none" stroke="#E8EEF7" stroke-width="1.6"/>
+    <rect x="262" y="6" width="26" height="12" rx="3" fill="none" stroke="#E8EEF7" stroke-width="1.2"/>
+    <rect x="264" y="8" width="16" height="8" rx="1.5"/>
+    <rect x="289" y="9.5" width="2" height="5" rx="1"/>
+  </g>
+
+  <rect x="0" y="28" width="300" height="46" fill="#0D1626"/>
+  <path d="M20 45l-6 6 6 6" fill="none" stroke="#E8EEF7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="150" y="57" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="600" fill="#E8EEF7" text-anchor="middle">Monitor</text>
+  <rect x="0" y="74" width="300" height="1" fill="#1E2A3E"/>
+
+  <g opacity="0.34" font-family="Arial,Helvetica,sans-serif">
+    <rect x="0" y="75" width="300" height="36" fill="#0F1A2C"/>
+    <text x="16" y="98" font-size="11" fill="#C6D3E4">Sn:  Z2348PG216100F1000159</text>
+    <circle cx="118" cy="300" r="70" fill="none" stroke="#1B2B44" stroke-width="12"/>
+    <text x="118" y="308" font-size="30" font-weight="700" fill="#FFFFFF" text-anchor="middle">96%</text>
+    <text x="118" y="338" font-size="12" fill="#E8EEF7" text-anchor="middle">Electricity</text>
+  </g>
+
+  <rect x="0" y="0" width="300" height="660" fill="#000000" opacity="0.55"/>
+
+  <rect x="28" y="196" width="244" height="222" rx="13" fill="#101A2B" stroke="#1E2A3E" stroke-width="1"/>
+  <text x="48" y="232" font-family="Arial,Helvetica,sans-serif" font-size="13.5" fill="#E8EEF7">Device Aliases</text>
+  <rect x="28" y="248" width="244" height="1" fill="#1E2A3E"/>
+
+  <text x="48" y="292" font-family="Arial,Helvetica,sans-serif" font-size="13.5" fill="#C6D3E4">TSET</text>
+  <rect x="46" y="304" width="208" height="1" fill="#2E3D55"/>
+
+  <rect x="44" y="348" width="212" height="40" rx="6" fill="#1E7BE8"/>
+  <text x="150" y="373" font-family="Arial,Helvetica,sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Save</text>
+
+  <text x="150" y="452" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8095AE" text-anchor="middle">Tap the serial number, rename it, then save</text>
+</svg>

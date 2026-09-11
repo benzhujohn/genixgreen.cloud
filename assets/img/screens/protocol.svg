@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 660" width="300" height="660" role="img" aria-label="GENIXGREEN app — inverter protocol selection">
+  <rect width="300" height="660" fill="#0A1220"/>
+
+  <text x="16" y="19" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#E8EEF7">08:35</text>
+  <g fill="#E8EEF7">
+    <rect x="212" y="11" width="3" height="7" rx="1"/>
+    <rect x="218" y="8" width="3" height="10" rx="1"/>
+    <rect x="224" y="5" width="3" height="13" rx="1"/>
+    <path d="M236 14a11 11 0 0 1 13 0" fill="none" stroke="#E8EEF7" stroke-width="1.6"/>
+    <rect x="262" y="6" width="26" height="12" rx="3" fill="none" stroke="#E8EEF7" stroke-width="1.2"/>
+    <rect x="264" y="8" width="16" height="8" rx="1.5"/>
+    <rect x="289" y="9.5" width="2" height="5" rx="1"/>
+  </g>
+
+  <rect x="0" y="28" width="300" height="46" fill="#0D1626"/>
+  <path d="M20 45l-6 6 6 6" fill="none" stroke="#E8EEF7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="155" y="56" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="600" fill="#E8EEF7" text-anchor="middle">Inverter Agreement Settings</text>
+  <rect x="0" y="74" width="300" height="1" fill="#1E2A3E"/>
+
+  <rect x="14" y="98" width="272" height="266" rx="11" fill="#0F1A2C" stroke="#1E2A3E" stroke-width="1"/>
+
+  <g font-family="Arial,Helvetica,sans-serif" font-size="10">
+    <text x="32" y="130" fill="#8095AE"><tspan fill="#E5484D">*</tspan>Bms Number</text>
+    <text x="266" y="130" fill="#C6D3E4" text-anchor="end" font-size="8.5">Z2348PG216100F1000159</text>
+    <rect x="32" y="146" width="236" height="1" fill="#1E2A3E"/>
+
+    <text x="32" y="180" fill="#8095AE"><tspan fill="#E5484D">*</tspan>RS485</text>
+    <text x="266" y="180" fill="#3ED47F" text-anchor="end">MUST</text>
+    <rect x="32" y="196" width="236" height="1" fill="#1E2A3E"/>
+
+    <text x="32" y="230" fill="#8095AE"><tspan fill="#E5484D">*</tspan>CAN</text>
+    <text x="266" y="230" fill="#F0A020" text-anchor="end">PYLN</text>
+    <rect x="32" y="246" width="236" height="1" fill="#1E2A3E"/>
+
+    <text x="32" y="280" fill="#8095AE">RS232</text>
+    <text x="266" y="280" fill="#5B6E86" text-anchor="end">&#8212;</text>
+    <rect x="32" y="296" width="236" height="1" fill="#1E2A3E"/>
+
+    <text x="32" y="330" fill="#8095AE">Protocol source</text>
+    <text x="266" y="330" fill="#C6D3E4" text-anchor="end">Read from BMS</text>
+  </g>
+
+  <rect x="14" y="392" width="128" height="40" rx="6" fill="#16233A" stroke="#2E3D55" stroke-width="1"/>
+  <text x="78" y="417" font-family="Arial,Helvetica,sans-serif" font-size="12.5" fill="#C6D3E4" text-anchor="middle">Read</text>
+  <rect x="158" y="392" width="128" height="40" rx="6" fill="#1E7BE8"/>
+  <text x="222" y="417" font-family="Arial,Helvetica,sans-serif" font-size="12.5" fill="#FFFFFF" text-anchor="middle">Ok</text>
+
+  <text x="150" y="482" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8095AE" text-anchor="middle">Read the original protocol from your inverter,</text>
+  <text x="150" y="499" font-family="Arial,Helvetica,sans-serif" font-size="10.5" fill="#8095AE" text-anchor="middle">then pick the matching preset and confirm.</text>
+
+  <g font-family="ui-monospace,Consolas,monospace" font-size="10">
+    <rect x="34" y="536" width="52" height="26" rx="13" fill="#101F2E" stroke="#1E3A55" stroke-width="1"/>
+    <text x="60" y="553" fill="#7EC4F5" text-anchor="middle">GNLG</text>
+    <rect x="92" y="536" width="52" height="26" rx="13" fill="#101F2E" stroke="#1E3A55" stroke-width="1"/>
+    <text x="118" y="553" fill="#7EC4F5" text-anchor="middle">SMA</text>
+    <rect x="150" y="536" width="52" height="26" rx="13" fill="#101F2E" stroke="#1E3A55" stroke-width="1"/>
+    <text x="176" y="553" fill="#7EC4F5" text-anchor="middle">SRTC</text>
+    <rect x="208" y="536" width="52" height="26" rx="13" fill="#101F2E" stroke="#1E3A55" stroke-width="1"/>
+    <text x="234" y="553" fill="#7EC4F5" text-anchor="middle">VICT</text>
+    <rect x="34" y="570" width="52" height="26" rx="13" fill="#101F2E" stroke="#1E3A55" stroke-width="1"/>
+    <text x="60" y="587" fill="#7EC4F5" text-anchor="middle">LXPR</text>
+    <rect x="92" y="570" width="52" height="26" rx="13" fill="#101F2E" stroke="#1E3A55" stroke-width="1"/>
+    <text x="118" y="587" fill="#7EC4F5" text-anchor="middle">SOFA</text>
+    <rect x="150" y="570" width="52" height="26" rx="13" fill="#101F2E" stroke="#1E3A55" stroke-width="1"/>
+    <text x="176" y="587" fill="#7EC4F5" text-anchor="middle">PYLN</text>
+  </g>
+</svg>

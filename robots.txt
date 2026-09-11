@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# 允许抓取二维码与截图资源
+Allow: /assets/img/
+
+Sitemap: https://www.genixgreen.cloud/sitemap.xml

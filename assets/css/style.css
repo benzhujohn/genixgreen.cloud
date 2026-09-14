@@ -481,6 +481,16 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: space-between;
   color: var(--muted-2); font-size: .8rem;
 }
+.footer__legal { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 20px; }
+.footer .footer__site {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--ink); font-weight: 700; font-size: .84rem;
+  transition: color .2s ease;
+}
+.footer .footer__site svg { width: 14px; height: 14px; flex: none; color: var(--green); }
+.footer .footer__site span { border-bottom: 1px solid transparent; transition: border-color .2s ease; }
+.footer .footer__site:hover { color: var(--green-700); }
+.footer .footer__site:hover span { border-bottom-color: currentColor; }
 
 /* ---------- Sticky mobile bar ---------- */
 .stickybar {

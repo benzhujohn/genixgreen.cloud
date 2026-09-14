@@ -16,6 +16,8 @@ window.GG_CONFIG = {
     iosStore: 'https://apps.apple.com/tw/app/genixgreen/id6479182549',
     // 可选：Google Play（留空则对应按钮自动隐藏）
     googlePlay: '',
+    // 公司官网（页脚「官网」入口）
+    site: 'https://genixgreen.com/',
     // ICP 备案跳转
     icpUrl: 'https://beian.miit.gov.cn/'
   },
@@ -66,7 +68,7 @@ window.GG_CONFIG = {
     address: 'Room 101, Building 1, No. 18 Hu Nan Road, Changping Town, Dongguan, Guangdong, China',
     phone: '+86 138 9298 1183',
     email: 'info05@genixgreen.com',
-    website: 'www.genixgreen.com',
+    website: 'genixgreen.com',
     icp: '粤ICP备2024223439号-1',
     police: '粤公网安备44190002007947号'
   },

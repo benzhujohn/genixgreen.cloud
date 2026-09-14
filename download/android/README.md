@@ -71,20 +71,37 @@ https://www.genixgreen.cloud/download/android/genixgreen.apk
 
 ## 替换后怎么验证（务必做）
 
-光看下载能不能点开是不够的——**旧包也能下载**。要核对哈希：
+光看下载能不能点开是不够的——**旧包也能下载，而且大小可能一模一样**。
+必须核对内容。**不要整包下载 28 MB**（实测会卡到 5 分钟以上），用**分段比对**几秒就能出结论：
 
 ```bash
-# 1) 看缓存是否已经换掉：这里的 sha256 必须和你的新包一致
-curl -s "https://www.genixgreen.cloud/download/android/genixgreen.apk" -o /tmp/dl.apk
-sha256sum /tmp/dl.apk
+W="https://www.genixgreen.cloud/download/android/genixgreen.apk"
+R="https://raw.githubusercontent.com/benzhujohn/genixgreen.cloud/main/download/android/genixgreen.apk"
+L="/path/to/你的新包.apk"
 
-# 2) 对照源站（绕过 ESA，一定是新的）
-curl -s -L "https://benzhujohn.github.io/genixgreen.cloud/download/android/genixgreen.apk" -o /tmp/src.apk
-sha256sum /tmp/src.apk
+# 逐段比对：源站(绕过ESA) vs 正式域名，并各自与本地新包核对
+for r in "0-1048575" "14000000-15048575" "27207166-28257941"; do
+  for base in "$R" "$W"; do
+    curl -s -r "$r" "$base" -o /tmp/seg.bin
+    a=$(sha256sum /tmp/seg.bin | cut -d' ' -f1)
+    s=$(dd if="$L" bs=1 skip=${r%%-*} count=$(( ${r##*-} - ${r%%-*} + 1 )) 2>/dev/null | sha256sum | cut -d' ' -f1)
+    [ "$a" = "$s" ] && echo "  $r  $base  一致 ✅" || echo "  $r  $base  不一致 ❌"
+  done
+done
+```
 
-# 3) 确认文件头是 APK/ZIP 魔数
-curl -s -r 0-3 "https://www.genixgreen.cloud/download/android/genixgreen.apk" | od -An -c
-# 期望输出：P   K 003 004
+判读：**源站那三行必然一致**（用来确认比对方法本身正确）；**正式域名那三行也必须全部一致**，
+只要求里出现「不一致」，就是 ESA 缓存没刷干净，回上一步再刷一次。
+
+> ⚠️ **不要再拿 `benzhujohn.github.io` 当「绕过 ESA 的源站」用了** ——
+> 仓库里已有 `CNAME`，GitHub Pages 会把所有 github.io 请求 301 跳到 `www.genixgreen.cloud`，
+> 等于又绕回了 ESA。可靠的源站地址是 `raw.githubusercontent.com`。
+
+最快的判据（看文件头）：APK 是 ZIP 包，**前 16 字节里带着 CRC32 和编译时间**，
+两份不同编译的包这一小段就不一样：
+
+```bash
+curl -s -r 0-63 "https://www.genixgreen.cloud/download/android/genixgreen.apk" | od -An -tx1 -v | head -2
 ```
 
 正确响应头应当是：
@@ -95,6 +112,28 @@ Content-Type: application/vnd.android.package-archive
 Content-Length: <你的新包字节数>
 X-Site-Cache-Status: MISS   ← 或 HIT 但 Age 很小
 ```
+
+> ⚠️ **注意：ESA 有多个边缘节点，各节点缓存状态不一致。**
+> `HEAD` 请求可能报 `MISS` / `Age: 1`，但同一个 URL 的 `GET` 请求却仍在报
+> `HIT` / `Age: 598880`（约 6.9 天）——**必须用 GET 的实际内容来判断**，
+> 只看 `HEAD` 的响应头会被误导。
+
+---
+
+## 参考：一次真实的缓存事故（2026-09-14）
+
+换包后实测的数据，可作为判断模板：
+
+| 取法 | 前 16 字节（十六进制） | 判定 |
+|---|---|---|
+| `raw.githubusercontent.com`（真源站） | `50 4b 03 04 14 00 08 08 08 00 6d 5a a9 5c e9 7e 68 2c` | ✅ 新包 |
+| 本地新包 | 同上 | ✅ 一致 |
+| `www.genixgreen.cloud`（经 ESA） | `50 4b 03 04 14 00 08 08 08 00 15 8a 6a 5c ab 8b c0 de` | ❌ **旧包** |
+
+两份包体积**恰好都是 28,257,942 字节**，只有内容和编译时间不同。
+ESA 在 `HEAD` 上谎报 `MISS`、`Age: 1`、`Last-Modified: 今天`，
+但 `GET` 上老实报 `HIT`、`Age: 598880`、`Last-Modified: Wed, 22 Apr 2026`。
+**以 GET 为准。**
 
 ---
 
